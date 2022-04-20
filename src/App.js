@@ -6,8 +6,8 @@ import './App.scss'
 export default function App() {
   const element = useRoutes(routes)
   return (
-    <div>
+    <>
       {element}
-    </div>
+    </>
   )
 }

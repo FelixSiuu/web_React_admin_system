@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import {connect} from 'react-redux'
 import Form from 'react-bootstrap/Form'
@@ -20,6 +20,14 @@ export default connect(
     const [isErr, setIsErr] = useState(false)
     const [isSuccess, setSuccess] = useState(false)
     const navigate = useNavigate()
+
+    useEffect(()=>{
+      if(props.token === 'adminfelixsiuhello') {
+        setTimeout(()=>{
+          navigate('/home')
+        },1000)
+      }
+    })
 
     // user name
     function getUser(e){
