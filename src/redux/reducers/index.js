@@ -4,8 +4,10 @@
 import { combineReducers } from 'redux'
 //  引入為store對象服務的reducer
 import token from './token.js'
+import userList from './userList.js'
 
 // 合併reducer 裡面存著各狀態state
 export default combineReducers({
-  token
+  token,
+  userList
 })

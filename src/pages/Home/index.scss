@@ -1,5 +1,5 @@
-$activeBlue: #1890ff;
-$fontColor: #7C8691;
+@import '../../App.scss';
+
 
 .home{
   display: flex;
@@ -36,13 +36,13 @@ $fontColor: #7C8691;
           padding-left: 40px;
           height: 40px;
           line-height: 40px;
-          color: $fontColor;
+          color: $color;
           font-size: 14px;
         }
         .active{
-          background-color: $activeBlue;
+          background-color: $background-color;
           color: white;
-          box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+          box-shadow: $box-shadow;
         }
         .accordion-item{
           position: relative;
@@ -51,7 +51,7 @@ $fontColor: #7C8691;
           .accordion-button {
             padding-left: 40px;
             height: 40px;
-            color: $fontColor;
+            color: $color;
             font-size: 14px;
             background-color: transparent;
             &:hover{
@@ -88,7 +88,7 @@ $fontColor: #7C8691;
         cursor: pointer;
         span{
           margin-right: 10px;
-          color: $activeBlue;
+          color: $background-color;
         }
       }
     }
@@ -103,7 +103,7 @@ $fontColor: #7C8691;
       line-height: 70px;
       text-align: center;
       font-size: 14px;
-      color: $fontColor;
+      color: $color;
       background-color: #EFF2F5;
     }
   }

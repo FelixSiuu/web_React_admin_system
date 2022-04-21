@@ -4,6 +4,10 @@ import { createStore } from 'redux'
 // 引入總的reducers
 import reducers from './reducers/index.js' 
 
+// 引入redux-devtools-extension 用於支持redux-devtools
+import {composeWithDevTools} from 'redux-devtools-extension'
+
+
 // 引入與redux-persist相關
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
@@ -14,7 +18,7 @@ const persistConfig = {
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);
-const store = createStore(persistedReducer);
+const store = createStore(persistedReducer,composeWithDevTools());
 
 export const persistor = persistStore(store);
 //  導出store 

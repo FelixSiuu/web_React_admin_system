@@ -1,8 +1,36 @@
+@import '../../../App.scss';
+
 .user{
   height: 100%;
   .user_body{
     height: 100%;
     padding: 20px;
     background-color: white;
+    .find{
+      @include center-box();
+      padding-bottom: 0;
+      .mb-3{
+        @include flex-center();
+        label{
+          flex: 20%;
+          margin-right: 10px;
+          white-space: nowrap;
+          font-size: 15px;
+        }
+      }
+    }
+    .create{
+      @include center-box();
+    }
+    .user_list{
+      @include center-box();
+      .delete{
+        color: red;
+        cursor: pointer;
+        &:hover{
+          color: $background-color
+        }
+      }
+    }
   }
 }

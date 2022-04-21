@@ -10,7 +10,7 @@ import './index.scss'
 
 export default connect(
   state => ({
-    token: state.token
+    token: state.token,
   }),
   {
     getTokenAction
@@ -59,7 +59,12 @@ export default connect(
                             {
                               item.children.map((child, index) => {
                                 return (
-                                  <NavLink to={child.pathName} state={child.title} className='child' key={index}>
+                                  <NavLink 
+                                  to={child.pathName} 
+                                  state={`${item.title} - ${child.title}`} 
+                                  className='child' 
+                                  key={index}
+                                  >
                                     {child.title}
                                   </NavLink>
                                 )
@@ -77,8 +82,8 @@ export default connect(
         </div>
   
         <div className="right">
-          <header className="logOut" onClick={goLogin}>
-            <div className="logOut_box">
+          <header className="logOut">
+            <div className="logOut_box" onClick={goLogin}>
               <span>Log Out</span>
               <span><ImExit /></span>
             </div>

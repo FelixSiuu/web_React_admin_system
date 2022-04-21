@@ -1,1 +1,29 @@
 @import "~bootstrap/scss/bootstrap";
+
+$background-color: #1890ff;
+$color: #7C8691;
+$box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+
+@mixin center-box{
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  border: 1px solid #E8E8E8;
+}
+@mixin flex-center{
+  display: flex;
+  align-items: center;
+}
+.mb-3{
+  @include flex-center();
+  label{
+    flex: 20%;
+    margin-right: 10px;
+    white-space: nowrap;
+    font-size: 15px;
+  }
+  .err{
+    border: 1px solid red !important;
+    box-shadow: 0 0.5px 5px red !important;
+  } 
+}

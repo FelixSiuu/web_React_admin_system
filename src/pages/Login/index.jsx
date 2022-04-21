@@ -94,13 +94,23 @@ export default connect(
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <span><BsPerson /></span>
-              <Form.Control type="text" placeholder="username : admin" className={getClassName()} onChange={(e)=>{getUser(e)}} />
+              <Form.Control 
+              type="text" 
+              placeholder="username : admin" 
+              className={getClassName()} 
+              onChange={(e)=>{getUser(e)}} 
+              />
               {errTips()}
             </Form.Group>
             
             <Form.Group className="mb-3" controlId="formBasicPas sword">
               <span><BsFileLock /></span>
-              <Form.Control type="password" placeholder="password : admin" className={getClassName()} onChange={(e)=>{getPwd(e)}} />
+              <Form.Control 
+              type="password" 
+              placeholder="password : admin" 
+              className={getClassName()} 
+              onChange={(e)=>{getPwd(e)}} 
+              />
               {errTips()}
             </Form.Group>
             <Button variant={isSuccess ? "success" : "primary"} type="submit" onClick={(e)=>{checkLogin(e)}} >
